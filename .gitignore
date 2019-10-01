@@ -1,6 +1,4 @@
-Stock-Notebook/
-Data/
-
+stock_notebook/
+data/
 .DS_Store
-
 NCDB_time_series.csv
