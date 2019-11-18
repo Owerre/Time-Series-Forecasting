@@ -11,14 +11,15 @@ plt.style.use('seaborn-white')
 mpl.rcParams['font.family'] = 'serif'
 
 
-def plot_timeseries(timeseries, color=None, marker=None, title=''):
+def plot_timeseries(timeseries, color=None, linestyle=None, marker=None, title=''):
     """This function plots the time series"""
 
     # Set font size and background color
     sns.set(font_scale=2)
     plt.style.use('ggplot')
 
-    timeseries.plot(marker=marker, color=color, figsize=(15, 6))
+    timeseries.plot(marker=marker, color=color,
+                    linestyle=linestyle, figsize=(15, 6))
     plt.xlabel('Year', fontsize=20)
     plt.ylabel('Euro to USD exchange', fontsize=20)
     plt.title(title, fontsize=20)
