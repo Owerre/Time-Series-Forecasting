@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 ####################################################################################################
 
 
-def standardize(X_train, X_test):
+def standardizer(X_train, X_test):
     # Instantiate the class
     scaler = StandardScaler()
 
