@@ -20,7 +20,7 @@ def plot_timeseries(timeseries, color=None, marker=None, title=''):
 
     timeseries.plot(marker=marker, color=color, figsize=(15, 6))
     plt.xlabel('Year', fontsize=20)
-    plt.ylabel('Number of fatalities', fontsize=20)
+    plt.ylabel('Euro to USD exchange', fontsize=20)
     plt.title(title, fontsize=20)
     plt.grid(True)
 
