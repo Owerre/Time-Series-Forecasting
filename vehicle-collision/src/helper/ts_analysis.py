@@ -73,47 +73,18 @@ class TimeSeriesAnalysis:
         for key, value in adf_results[4].items():
             print('Critial Values (%s): %0.6f' % (key, value))
 
-    def diagnostic_plot(self, y_true, y_pred):
+    def error_metrics(self, y_true, y_pred):
         """
-        Diagnostic Plot of Residuals for the Out-of-Sample Forecast
+        Print out error metrics
         """
-        gridsize = (1, 2)
-        ax1 = plt.subplot2grid(gridsize, (0, 0))
-        ax2 = plt.subplot2grid(gridsize, (0, 1))
-    #     ax3 = plt.subplot2grid(gridsize, (1, 0))
-    #     ax4 = plt.subplot2grid(gridsize, (1, 1))
+        mape = self.mape(y_true, y_pred)
+        r2 = self.r_squared(y_true, y_pred)
+        mae = self.mae(y_true, y_pred)
+        rmse = self.rmse(y_true, y_pred)
 
-        residual = y_true-y_pred   # compute the residual
-
-        ax1.scatter(y_pred, residual)
-        ax1.set_xlim([min(y_true) - 0.02, max(y_true) + 0.02])
-        ax1.axhline(y=0, lw=2, color='k')
-        ax1.set_xlabel('Predicted value', fontsize=20)
-        ax1.set_ylabel('Residual', fontsize=20)
-        ax1.set_title('Residual plot', fontsize=20)
-
-        ax2.scatter(y_pred, y_true)
-        ax2.plot([min(y_true) - 0.02, max(y_true) + 0.02],
-                [min(y_true) - 0.02, max(y_true) + 0.02],
-                color='k')
-        ax2.set_xlim([min(y_true) - 0.02, max(y_true) + 0.02])
-        ax2.set_ylim([min(y_true) - 0.02, max(y_true) + 0.02])
-        ax2.set_xlabel('Predicted value', fontsize=20)
-        ax2.set_ylabel('Actual value', fontsize=20)
-        ax2.set_title('Residual plot', fontsize=20)
-
-    #     ax3.plot(acorr_ljungbox(residual, lags = nlags)[1],'o')
-    #     ax3.axhline(y=0.05,linestyle= '--', color = 'k')
-    #     ax3.set_xlabel('Lag', fontsize = 20)
-    #     ax3.set_ylabel('p-value', fontsize = 20)
-    #     ax3.set_title('p-values for Ljung-Box statistic', fontsize = 20)
-
-    #     ax4.scatter(data.index.year, residual)
-    #     ax4.set_xlabel('Year', fontsize = 20)
-    #     ax4.set_title('Residuals vs. years', fontsize = 20)
-    #     ax4.set_ylabel('Residual', fontsize = 20)
-    #     ax4.set_xticks([2018, 2019])
-
+        result = {'MAPE = {}'.format(np.round(mape,3)), 'MAE = {}'.format(np.round(mae,3)),
+        'RMSE = {}'.format(np.round(rmse,3)), 'R^2 = {}'.format(np.round(r2,3))}
+        return result
 
     def mape(self, y_true, y_pred):
         """
