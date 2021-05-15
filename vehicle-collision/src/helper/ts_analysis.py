@@ -26,7 +26,7 @@ class TimeSeriesAnalysis:
         Plot univariant time series data
         """
         ts.plot(marker=marker, color=color, figsize=(18,8))
-        plt.xlabel('Year', fontsize=20)
+        plt.xlabel('Time', fontsize=20)
         plt.ylabel('Monthly fatality rate', fontsize=20)
         plt.title(title, fontsize=20)
 
@@ -49,7 +49,7 @@ class TimeSeriesAnalysis:
         ts.plot(color='r', marker='o', ax=ax1, label='Original')
         rolling_mean.plot(color='b', ax=ax1, label='Rolling mean')
         rolling_std.plot(color='g', ax=ax1, label='Rolling Std')
-        ax1.set_xlabel('Year', fontsize=20)
+        ax1.set_xlabel('Time', fontsize=20)
         ax1.set_ylabel('Monthly fatality rate', fontsize=20)
         ax1.set_title(title, fontsize=20)
         ax1.legend(loc='best')
