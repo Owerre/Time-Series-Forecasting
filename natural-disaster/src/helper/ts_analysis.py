@@ -1,8 +1,3 @@
-####################################
-# Author: S. A. Owerre
-# Date modified: 10/05/2021
-# Class: Time series analysis
-####################################
 
 # Filter warnings
 import warnings
@@ -32,7 +27,7 @@ class TimeSeriesAnalysis:
         """
         ts.plot(marker=marker, color=color, figsize=(18,8))
         plt.xlabel('Time', fontsize=20)
-        plt.ylabel('Monthly fatality rate', fontsize=20)
+        plt.ylabel('Yearly occurrence', fontsize=20)
         plt.title(title, fontsize=20)
 
     def plot_ts(self, ts, title = '', nlags=None):
@@ -55,7 +50,7 @@ class TimeSeriesAnalysis:
         rolling_mean.plot(color='b', ax=ax1, label='Rolling mean')
         rolling_std.plot(color='g', ax=ax1, label='Rolling Std')
         ax1.set_xlabel('Time', fontsize=20)
-        ax1.set_ylabel('Monthly fatality rate', fontsize=20)
+        ax1.set_ylabel('Yearly occurrence', fontsize=20)
         ax1.set_title(title, fontsize=20)
         ax1.legend(loc='best')
 
