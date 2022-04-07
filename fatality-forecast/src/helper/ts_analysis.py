@@ -31,9 +31,10 @@ class TimeSeriesAnalysis:
         Plot univariant time series data
         """
         ts.plot(marker=marker, color=color, figsize=(18,8))
-        plt.xlabel('Time', fontsize=20)
+        plt.xlabel('Year', fontsize=20)
         plt.ylabel('Monthly fatality rate', fontsize=20)
         plt.title(title, fontsize=20)
+        plt.savefig('../images/ts.png')
 
     def plot_ts(self, ts, title = '', nlags=None):
         """
