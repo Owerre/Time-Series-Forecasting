@@ -83,7 +83,7 @@ class TimeSeriesAnalysis:
         Print out error metrics
         """
         mape = self.mape(y_true, y_pred)
-        wmape = self.mape(y_true, y_pred)
+        wmape = self.wmape(y_true, y_pred)
         r2 = self.r_squared(y_true, y_pred)
         mae = self.mae(y_true, y_pred)
         rmse = self.rmse(y_true, y_pred)
@@ -108,8 +108,8 @@ class TimeSeriesAnalysis:
         Weighted Mean absolute percentage error.
         """
         et = (y_true - y_pred)
-        mape = np.sum(np.abs(et))*100/np.sum(np.abs(y_true))
-        return mape
+        wmape = np.sum(np.abs(et))*100/np.sum(np.abs(y_true))
+        return wmape
 
     def mae(self, y_true, y_pred):
         """
