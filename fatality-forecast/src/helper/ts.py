@@ -19,7 +19,7 @@ import seaborn as sns
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.stattools import adfuller
 
-class TimeSeriesAnalysis:
+class TimeSeriesForecasting:
     """
     A class for analyzing time series data
     """
