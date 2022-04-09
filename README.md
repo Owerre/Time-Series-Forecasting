@@ -9,3 +9,6 @@
 ## Forecast
 
 ![fig](fatality-forecast/images/fig.png)
+
+## Ljung-Box Test
+![fig](fatality-forecast/images/figlb.png)
