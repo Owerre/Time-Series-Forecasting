@@ -64,12 +64,14 @@ class TimeSeriesForecasting:
         plot_acf(ts, lags=nlags, ax=ax2)
         ax2.set_xlabel('Lag', fontsize=20)
         ax2.set_ylabel('ACF', fontsize=20)
+        ax2.set_xticks(np.arange(0,nlags, 12))
         ax2.set_title('Autocorrelation', fontsize=20)
 
         # Plot PACF
         plot_pacf(ts, lags=nlags, ax=ax3)
         ax3.set_xlabel('Lag', fontsize=20)
         ax3.set_ylabel('PACF', fontsize=20)
+        ax3.set_xticks(np.arange(0,nlags, 12))
         ax3.set_title('Partial Autocorrelation', fontsize=20)
 
         # Perform Dickey-Fuller test
