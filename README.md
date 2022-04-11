@@ -11,5 +11,5 @@
 ![fig](fatality-forecast/images/gpr.png)
 
 ## Model Diagnostics and Ljung-Box Test
-![fig](fatality-forecast/images/figdg.png)
+![fig](fatality-forecast/images/figdi.png)
 ![fig](fatality-forecast/images/figlb.png)
