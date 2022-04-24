@@ -10,7 +10,7 @@
 
 ![fig](fatality-forecast/images/figfcst.png)
 
-## Model Diagnostics 
+## Model Diagnostics Plots 
 ![fig](fatality-forecast/images/figdplot1.png)
 ![fig](fatality-forecast/images/figdplot2.png)
 
