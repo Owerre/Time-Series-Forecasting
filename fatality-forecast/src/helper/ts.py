@@ -61,7 +61,7 @@ class TimeSeriesForecasting:
         ax1.legend(loc='best')
 
         # Plot ACF
-        plot_acf(ts, lags=nlags, ax=ax2)
+        plot_acf(ts, lags=nlags,  ax=ax2)
         ax2.set_xlabel('Lag', fontsize=20)
         ax2.set_ylabel('ACF', fontsize=20)
         ax2.set_xticks(np.arange(0,nlags, 12))
