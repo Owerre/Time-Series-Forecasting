@@ -10,6 +10,9 @@
 
 ![fig](fatality-forecast/images/figfcst.png)
 
-## Model Diagnostics and Ljung-Box Test
-![fig](fatality-forecast/images/figdplot.png)
+## Model Diagnostics 
+![fig](fatality-forecast/images/figdplot1.png)
+![fig](fatality-forecast/images/figdplot2.png)
+
+## Ljung-Box Test
 ![fig](fatality-forecast/images/figlb.png)
