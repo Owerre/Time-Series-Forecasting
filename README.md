@@ -8,7 +8,7 @@
 
 ## Forecast
 
-![fig](fatality-forecast/images/fig_fcst.png)
+![fig](fatality-forecast/images/figfcst.png)
 
 ## Model Diagnostics and Ljung-Box Test
 ![fig](fatality-forecast/images/figdplot.png)
