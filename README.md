@@ -11,5 +11,5 @@
 ![fig](fatality-forecast/images/fig_fcst.png)
 
 ## Model Diagnostics and Ljung-Box Test
-![fig](fatality-forecast/images/figdi.png)
+![fig](fatality-forecast/images/figdplot.png)
 ![fig](fatality-forecast/images/figlb.png)
