@@ -34,6 +34,7 @@ class TimeSeriesForecasting:
         plt.xlabel('Year', fontsize=20)
         plt.ylabel('Monthly fatality rate', fontsize=20)
         plt.title(title, fontsize=20)
+        plt.xlim('1998-09-01', '2018-04-01')
         plt.savefig('../images/ts.png')
 
     def plot_ts(self, ts, title = '', nlags=None):
@@ -57,6 +58,7 @@ class TimeSeriesForecasting:
         rolling_std.plot(color='g', ax=ax1, label='Rolling Std')
         ax1.set_xlabel('Time', fontsize=20)
         ax1.set_ylabel('Monthly fatality rate', fontsize=20)
+        ax1.set_xlim('1998-09-01', '2018-04-01')
         ax1.set_title(title, fontsize=20)
         ax1.legend(loc='best')
 
