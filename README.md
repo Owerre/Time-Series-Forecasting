@@ -11,7 +11,7 @@
 ![fig](fatality-forecast/images/prophet.png)
 
 ## Model Diagnostics Plots on the Test Set
-![fig](fatality-forecast/images/prophe2.png)
+![fig](fatality-forecast/images/prophet2.png)
 ![fig](fatality-forecast/images/prophet3.png)
 
 ## Ljung-Box Test
