@@ -8,7 +8,7 @@
 
 ## Forecast
 
-![fig](fatality-forecast/images/prophet.png)
+![fig](fatality-forecast/images/prophet1.png)
 
 ## Model Diagnostics Plots on the Test Set
 ![fig](fatality-forecast/images/prophet2.png)
