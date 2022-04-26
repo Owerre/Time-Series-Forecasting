@@ -2,7 +2,7 @@
 
 ## 1. Fatality Forecasting (Vehicle Collision)
 
-## 1A.Data Information: [open.canada.ca](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
+## 1A. Data Information: [open.canada.ca](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
 ## 1B. Time Series Plot
 ![fig](fatality-forecasting/images/ts.png)
