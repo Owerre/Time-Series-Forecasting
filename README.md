@@ -1,6 +1,6 @@
 # Time Series Forecasting 
 
-## 1. Fatality Forecasting (Vehicle Collision)
+## 1. Fatality Forecasting (FB Prophet)
 
 ## 1A. Data Information: [open.canada.ca](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
@@ -18,7 +18,7 @@
 ![fig](fatality-forecasting/images/prophet4.png)
 
 
-## 2. Sales Forecasting (Product of a Company)
+## 2. Sales Forecasting (ARIMA)
 
 ## 2A. Time Series Plot
 ![fig](sales-forecasting/images/ts.png)
@@ -32,5 +32,5 @@
 ## 2D. Ljung-Box Test
 ![fig](sales-forecasting/images/arima3.png)
 
-## 2E. Future Forecast
+## 2E. Future Forecasts
 ![fig](sales-forecasting/images/arima4.png)
