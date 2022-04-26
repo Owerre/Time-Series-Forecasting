@@ -4,15 +4,15 @@
 
 ## Time Series Plot
 
-![fig](fatality-forecast/images/ts.png)
+![fig](fatality-forecasting/images/ts.png)
 
-## Forecast on the Test Set
+## Forecasting on the Test Set
 
-![fig](fatality-forecast/images/prophet1.png)
+![fig](fatality-forecasting/images/prophet1.png)
 
 ## Model Diagnostics Plots on the Test Set
-![fig](fatality-forecast/images/prophet2.png)
-![fig](fatality-forecast/images/prophet3.png)
+![fig](fatality-forecasting/images/prophet2.png)
+![fig](fatality-forecasting/images/prophet3.png)
 
 ## Ljung-Box Test
-![fig](fatality-forecast/images/prophet4.png)
+![fig](fatality-forecasting/images/prophet4.png)
