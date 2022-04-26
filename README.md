@@ -6,7 +6,7 @@
 
 ![fig](fatality-forecast/images/ts.png)
 
-## Forecast
+## Forecast on the Test Set
 
 ![fig](fatality-forecast/images/prophet1.png)
 

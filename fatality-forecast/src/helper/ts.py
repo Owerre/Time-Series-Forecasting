@@ -30,7 +30,7 @@ class TimeSeriesForecasting:
         """
         Plot univariant time series data
         """
-        ts.plot(marker=marker, color=color, figsize=(18,8))
+        ts.plot(marker=marker, color=color, markersize=10, markerfacecolor='none', figsize=(18,8))
         plt.xlabel('Year', fontsize=20)
         plt.ylabel('Monthly fatality rate', fontsize=20)
         plt.title(title, fontsize=20)
@@ -53,9 +53,9 @@ class TimeSeriesForecasting:
         rolling_std = ts.rolling(window=24).std()
 
         # Plot original time series and rolling mean & std
-        ts.plot(color='r', marker='o', ax=ax1, label='Original')
-        rolling_mean.plot(color='b', ax=ax1, label='Rolling mean')
-        rolling_std.plot(color='g', ax=ax1, label='Rolling Std')
+        ts.plot(color='r', marker='o', markersize=10, markerfacecolor='none', ax=ax1, label='Original')
+        rolling_mean.plot(color='b', markersize=10, markerfacecolor='none', ax=ax1, label='Rolling mean')
+        rolling_std.plot(color='g', markersize=10, markerfacecolor='none', ax=ax1, label='Rolling Std')
         ax1.set_xlabel('Time', fontsize=20)
         ax1.set_ylabel('Monthly fatality rate', fontsize=20)
         ax1.set_xlim('1998-09-01', '2018-04-01')
