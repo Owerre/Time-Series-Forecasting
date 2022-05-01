@@ -1,6 +1,6 @@
 # Time Series Forecasting 
 
-## 2. Hourly Fatality Forecasting (ML Models)
+## 2. Hourly Collision Forecasting (ML Models)
 
 ### 2A. Data Information: [open.canada.ca](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
