@@ -45,7 +45,7 @@ class RegressionModels:
         Parameters
         ----------
         model: supervised classification model
-        X_train: feature matrix of the training set
+        X_train: training feature matrix
         y_train: target variable
         cv_fold: number of cross-validation fold
 
