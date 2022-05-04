@@ -196,7 +196,7 @@ class RegressionModels:
         plt.grid(True)
         plt.xlabel('Forecast horizon (hours)')
         plt.ylabel('Mean absolute percentage error')
-        plt.title('Mean absolute percentage over time')
+        plt.title('Mean absolute percentage error over time')
         plt.xticks(np.arange(24,121,24))
         labels = ['0%', '40%', '80%', '120%', '160%']
         plt.yticks(np.arange(0,170,40),labels)
