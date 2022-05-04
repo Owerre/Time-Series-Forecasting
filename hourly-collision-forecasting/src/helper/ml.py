@@ -231,7 +231,7 @@ class RegressionModels:
         plt.ylabel('Autocorrelation')
         plt.title('Autocorrelation of residuals')
         plt.legend(loc='best')
-        plt.savefig('../images/residual.png')
+        plt.savefig('../images/resid.png')
     
     def diagnostic_plot_(self, y_pred, y_true, ylim=None):
         """

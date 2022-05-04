@@ -11,7 +11,7 @@
 ![fig](hourly-collision-forecasting/images/result.png)
 
 ### 1D. Model Diagnostics Plots on the Test Set
-![fig](hourly-collision-forecasting/images/residual.png)
+![fig](hourly-collision-forecasting/images/resid.png)
 
 ## 2. Monthly Fatality Forecasting (FB Prophet)
 
