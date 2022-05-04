@@ -81,7 +81,7 @@ class RegressionModels:
 
         Parameters
         ----------
-        X_train: feature matrix of the training set
+        X_train: training feature matrix
         y_train: target variable
         cv_fold: number of cross-validation fold
 
