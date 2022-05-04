@@ -4,19 +4,20 @@
 # Class: Machine learning
 ####################################
 
-# filter warnings
+# Filter warnings
 import warnings
 warnings.filterwarnings("ignore")
 
-# data manipulation and visualization
+# Data manipulation and visualization
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# model performance
+# Model performance
 from sklearn.metrics import make_scorer
 from statsmodels.stats.diagnostic import acorr_ljungbox
 from sklearn.model_selection import cross_validate
+
 
 class RegressionModels:
     """
@@ -173,12 +174,7 @@ class RegressionModels:
          # residuals & standardize residuals
         residual = (y_true - y_pred)
         rstandard = (residual-np.mean(residual))/np.std(residual)
-        
-        # mean absolute percentage error
-        mape = {}  
-        ape = np.abs(residual)*100/np.abs(y_true)
-        for i in range(0, len(ape), 24):
-            mape[i+24] = np.mean(ape[0:i+24])
+        ape = np.abs(residual)*100/np.abs(y_true) # absolute percent error
         
         # plot figures
         plt.subplot(221)
@@ -192,14 +188,13 @@ class RegressionModels:
         plt.legend(loc='best')
 
         plt.subplot(222)
-        plt.plot(mape.keys(), mape.values(), color=color, marker=marker, label=label)
+        plt.plot(range(1,len(ape)+1), ape, color=color, marker=marker, 
+                 markerfacecolor='none', label=label
+                )
         plt.grid(True)
         plt.xlabel('Forecast horizon (hours)')
-        plt.ylabel('Mean absolute percentage error')
-        plt.title('Mean absolute percentage over time')
-        plt.xticks(np.arange(24,121,24))
-        labels = ['0%', '40%', '80%', '120%', '160%']
-        plt.yticks(np.arange(0,170,40),labels)
+        plt.ylabel('Absolute percent error')
+        plt.title('Absolute percent error over time')
         plt.legend(loc='best')
         
         plt.subplot(223)

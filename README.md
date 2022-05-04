@@ -1,16 +1,16 @@
 # Time Series Forecasting 
 
-## 2. Hourly Collision Forecasting (ML Models)
+## 1. Hourly Collision Forecasting (ML Models)
 
-### 2A. Data Information: [open.canada.ca](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
+### 1A. Data Information: [open.canada.ca](https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a)
 
-### 2B. Time Series Plot
+### 1B. Time Series Plot
 ![fig](hourly-collision-forecasting/images/fig3.png)
 
-### 2C. Forecasting on the Test Set
+### 1C. Forecasting on the Test Set
 ![fig](hourly-collision-forecasting/images/result.png)
 
-### 2D. Model Diagnostics Plots on the Test Set
+### 1D. Model Diagnostics Plots on the Test Set
 ![fig](hourly-collision-forecasting/images/residual.png)
 
 ## 2. Monthly Fatality Forecasting (FB Prophet)
