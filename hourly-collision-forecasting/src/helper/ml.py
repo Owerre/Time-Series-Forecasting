@@ -178,7 +178,7 @@ class RegressionModels:
         mape = {}  
         ape = np.abs(residual)*100/np.abs(y_true)
         for i in range(0, len(ape), 24):
-            mape[i+24] = np.mean(ape[0:i+24])
+            mape[i+24] = np.mean(ape[:i+24])
         
         # plot figures
         plt.subplot(221)
