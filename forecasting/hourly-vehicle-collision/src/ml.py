@@ -63,10 +63,10 @@ class RegressionModels:
         r2 = cv_results['test_r2']
 
         errors = {
-            'wMAPE = {}'.format(np.round(wmape.mean(), 3)),
-            'MAE = {}'.format(np.round(mae.mean(), 3)),
-            'RMSE = {}'.format(np.round(rmse.mean(), 3)),
-            'R^2 = {}'.format(np.round(r2.mean(), 3)),
+            f'wMAPE = {np.round(wmape.mean(), 3)}',
+            f'MAE = {np.round(mae.mean(), 3)}',
+            f'RMSE = {np.round(rmse.mean(), 3)}',
+            f'R^2 = {np.round(r2.mean(), 3)}',
         }
         print(f'5-fold cross-validation results for {str(model_nm)}')
         print('-' * 60)
