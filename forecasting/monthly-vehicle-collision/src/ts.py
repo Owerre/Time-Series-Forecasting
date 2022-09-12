@@ -107,14 +107,14 @@ class TimeSeriesForecasting:
         mae = self.mae(y_true, y_pred)
         rmse = self.rmse(y_true, y_pred)
 
-        result = {
-            'MAPE = {}'.format(np.round(mape, 3)),
-            'WMAPE = {}'.format(np.round(wmape, 3)),
-            'MAE = {}'.format(np.round(mae, 3)),
-            'RMSE = {}'.format(np.round(rmse, 3)),
-            'R^2 = {}'.format(np.round(r2, 3)),
+        errors = {
+            f'MAPE = {np.round(mape, 3)}',
+            f'WMAPE = {np.round(wmape, 3)}',
+            f'MAE = {np.round(mae, 3)}',
+            f'RMSE = {np.round(rmse, 3)}',
+            f'R^2 = {np.round(r2, 3)}',
         }
-        return result
+        return errors
 
     def mape(self, y_true, y_pred):
         """Mean absolute percentage error."""

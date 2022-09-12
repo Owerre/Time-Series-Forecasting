@@ -16,7 +16,7 @@ from sklearn.model_selection import cross_validate
 
 
 class RegressionModels:
-    """This class is used for training supervised regression models."""
+    """A class for training supervised regression models."""
 
     def __init__(self):
         """Parameter initialization."""
@@ -48,7 +48,7 @@ class RegressionModels:
         -------
         Performance metrics on the cross-validation training set
         """
-        scoring = scoring = {
+        scoring = {
             'mae': 'neg_mean_absolute_error',
             'rmse': 'neg_root_mean_squared_error',
             'wmape': self.custom_scorer(),
@@ -68,7 +68,7 @@ class RegressionModels:
             'RMSE = {}'.format(np.round(rmse.mean(), 3)),
             'R^2 = {}'.format(np.round(r2.mean(), 3)),
         }
-        print('5-fold cross-validation results for {}'.format(str(model_nm)))
+        print(f'5-fold cross-validation results for {str(model_nm)}')
         print('-' * 60)
         print(errors)
         print('-' * 60)
@@ -161,7 +161,7 @@ class RegressionModels:
         Performance metrics on the test set
         """
         # Print results
-        print('Test prediction results for {}'.format(model_nm))
+        print(f'Test prediction results for {model_nm}')
         print('-' * 60)
         print(self.error_metrics(y_true, y_pred))
         print('-' * 60)
@@ -322,10 +322,10 @@ class RegressionModels:
         rmse = self.rmse(y_true, y_pred)
 
         errors = {
-            'WMAPE = {}'.format(np.round(wmape, 3)),
-            'MAE = {}'.format(np.round(mae, 3)),
-            'RMSE = {}'.format(np.round(rmse, 3)),
-            'R^2 = {}'.format(np.round(r2, 3)),
+            f'WMAPE = {np.round(wmape, 3)}',
+            f'MAE = {np.round(mae, 3)}',
+            f'RMSE = {np.round(rmse, 3)}',
+            f'R^2 = {np.round(r2, 3)}',
         }
         return errors
 
