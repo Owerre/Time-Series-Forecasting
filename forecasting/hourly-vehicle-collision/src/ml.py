@@ -316,47 +316,58 @@ class RegressionModels:
 
     def error_metrics(self, y_true, y_pred):
         """Print out error metrics."""
+        mape = self.mape(y_true, y_pred)
         wmape = self.wmape(y_true, y_pred)
+        mase = self.mase(y_true, y_pred)
         r2 = self.r_squared(y_true, y_pred)
         mae = self.mae(y_true, y_pred)
         rmse = self.rmse(y_true, y_pred)
 
         errors = {
+            f'MAPE = {np.round(mape, 3)}',
             f'WMAPE = {np.round(wmape, 3)}',
+            f'MASE = {np.round(mase,3)}',
             f'MAE = {np.round(mae, 3)}',
             f'RMSE = {np.round(rmse, 3)}',
             f'R^2 = {np.round(r2, 3)}',
         }
         return errors
 
-    def wmape(self, y_true, y_pred):
-        """Weighted Mean absolute percentage error."""
-        et = y_true - y_pred
-        wmape = np.sum(np.abs(et)) * 100 / np.sum(np.abs(y_true))
-        return wmape
-
     def mape(self, y_true, y_pred):
         """Mean absolute percentage error."""
+        _mape = np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+        return _mape
+
+    def wmape(self, y_true, y_pred):
+        """Weighted mean absolute percentage error."""
         et = y_true - y_pred
-        mape = np.mean(np.abs(et / y_true)) * 100
-        return mape
+        _wmape = np.sum(np.abs(et)) * 100 / np.sum(np.abs(y_true))
+        return _wmape
+
+    def mase(self, y_true, y_pred):
+        """Mean absolute scaled error."""
+        # mean absolute error of one-step ahead
+        # naive forecast for non-seasonal forecast
+        mae_naive = pd.Series(y_true).diff().abs().mean()
+        
+        # mean absolute error of forecast
+        _mae = np.mean(np.abs(y_true - y_pred))
+        _mase = _mae / mae_naive
+        return _mase
 
     def mae(self, y_true, y_pred):
         """Mean absolute error."""
-        et = y_true - y_pred
-        mae = np.mean(np.abs(et))
-        return mae
+        _mae = np.mean(np.abs(y_true - y_pred))
+        return _mae
 
     def rmse(self, y_true, y_pred):
         """Root mean squared error."""
-        et = y_true - y_pred
-        rmse = np.sqrt(np.mean(et**2))
-        return rmse
+        _rmse = np.sqrt(np.mean((y_true - y_pred) ** 2))
+        return _rmse
 
     def r_squared(self, y_true, y_pred):
-        """r squared (coefficient of determination)."""
-        et = y_true - y_pred
-        mse = np.mean(et**2)  # mean squared error
+        """r-squared (coefficient of determination)."""
+        mse = np.mean((y_true - y_pred) ** 2)  # mean squared error
         var = np.mean((y_true - np.mean(y_true)) ** 2)  # sample variance
-        r_squared = 1 - mse / var
-        return r_squared
+        _r_squared = 1 - mse / var
+        return _r_squared
