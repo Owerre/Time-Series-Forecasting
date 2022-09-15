@@ -137,7 +137,7 @@ class TimeSeriesForecasting:
         mae_naive = pd.Series(y_true).diff().abs().mean()
         
         # mean  absolute error of forecast
-        _mae = np.mean(np.abs(y_true - y_pred))
+        _mae = self.mae(y_true - y_pred)
         _mase = _mae / mae_naive
         return _mase
 
