@@ -31,12 +31,12 @@ class TimeSeriesForecasting:
         rmse = self.rmse(y_true, y_pred)
 
         errors = {
-            f'MAPE = {np.round(mape, 3)}',
-            f'WMAPE = {np.round(wmape, 3)}',
-            f'MASE = {np.round(mase,3)}',
-            f'MAE = {np.round(mae, 3)}',
-            f'RMSE = {np.round(rmse, 3)}',
-            f'R^2 = {np.round(r2, 3)}',
+            'MAPE' : np.round(mape, 3),
+            'WMAPE' : np.round(wmape, 3),
+            'MASE' : np.round(mase,3),
+            'MAE' : np.round(mae, 3),
+            'RMSE': np.round(rmse, 3),
+            'R^2': np.round(r2, 3),
         }
         return errors
 
@@ -58,7 +58,7 @@ class TimeSeriesForecasting:
         mae_naive = pd.Series(y_true).diff().abs().mean()
         
         # mean  absolute error of forecast
-        _mae = self.mae(y_true - y_pred)
+        _mae = self.mae(y_true, y_pred)
         _mase = _mae / mae_naive
         return _mase
 
